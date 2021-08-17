@@ -1,0 +1,1 @@
+cmd_/home/ashish/device_drivers/native_compiler/param2/param2.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id=sha1  -T ./scripts/module-common.lds -o /home/ashish/device_drivers/native_compiler/param2/param2.ko /home/ashish/device_drivers/native_compiler/param2/param2.o /home/ashish/device_drivers/native_compiler/param2/param2.mod.o;  true

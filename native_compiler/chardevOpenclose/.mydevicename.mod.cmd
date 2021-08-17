@@ -1,0 +1,1 @@
+cmd_/home/ashish/device_drivers/native_compiler/chardevOpenclose/mydevicename.mod := { echo  /home/ashish/device_drivers/native_compiler/chardevOpenclose/mydevicename.o;  echo; } > /home/ashish/device_drivers/native_compiler/chardevOpenclose/mydevicename.mod

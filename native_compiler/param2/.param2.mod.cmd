@@ -1,0 +1,1 @@
+cmd_/home/ashish/device_drivers/native_compiler/param2/param2.mod := { echo  /home/ashish/device_drivers/native_compiler/param2/param2.o;  echo; } > /home/ashish/device_drivers/native_compiler/param2/param2.mod

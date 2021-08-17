@@ -1,0 +1,1 @@
+cmd_/home/ashish/device_drivers/native_compiler/param2/Module.symvers := sed 's/ko$$/o/' /home/ashish/device_drivers/native_compiler/param2/modules.order | scripts/mod/modpost -m -a   -o /home/ashish/device_drivers/native_compiler/param2/Module.symvers -e -i Module.symvers   -T -
