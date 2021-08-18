@@ -39,7 +39,7 @@ static int device_open(struct inode *inode, struct file *filp)
 		printk(KERN_ALERT "mydevicename2 : could not lock device during open");
 		return -1;
 	}
-	printk(KERN_INFO "mydevicename2 : odevice opened ");
+	printk(KERN_INFO "mydevicename2 : -- device opened ");
 	return 0;
 }
 	//(8)called when user wants to get info from from the device.
@@ -47,9 +47,9 @@ ssize_t device_read(struct file* filp, char* bufStoreData, size_t bufCount , lof
 	{
 	//take data from kernel space(device)  to  userspace (process)
 	//copy_to_user(destination , source , sizeto transfer);
+	printk(KERN_INFO "mydevicename2: reading from device ");	
+	ret = copy_to_user (bufStoreData,virtual_device.data,bufCount);
 	
-	printk(KERN_INFO "mydevicename2: reading from device ");
-	ret = copy_to_user (&bufStoreData, virtual_device.data, bufCount);
 	return ret;
 	}
 	
@@ -59,8 +59,8 @@ ssize_t device_write(struct file* filp, const char* bufSourceData , size_t bufCo
 	//send data from user to kernel
 	//copy_from_user (dest, source, count)
 	
-	printk(KERN_INFO "mydevicename2: writing to device");
-	ret = copy_from_user(&virtual_device.data,bufSourceData, bufCount);
+	printk(KERN_INFO "mydevicename2: writing to device ");
+	ret = copy_from_user(virtual_device.data,bufSourceData,bufCount);
 	return ret;	
 	}
 	
@@ -133,7 +133,6 @@ static void driver_exit(void)	//step(4) exit module, in this unregister everythi
 	unregister_chrdev_region(dev_num, 1);
 	printk(KERN_ALERT "mydevicename2: unload module ");
 }
-
 
 module_init(driver_entry);
 module_exit(driver_exit);
