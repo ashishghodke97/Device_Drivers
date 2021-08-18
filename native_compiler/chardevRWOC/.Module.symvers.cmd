@@ -1,0 +1,1 @@
+cmd_/home/ashish/device_drivers/Device_Drivers/native_compiler/chardevRWOC/Module.symvers := sed 's/ko$$/o/' /home/ashish/device_drivers/Device_Drivers/native_compiler/chardevRWOC/modules.order | scripts/mod/modpost -m -a   -o /home/ashish/device_drivers/Device_Drivers/native_compiler/chardevRWOC/Module.symvers -e -i Module.symvers   -T -

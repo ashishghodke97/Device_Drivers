@@ -1,0 +1,1 @@
+cmd_/home/ashish/device_drivers/Device_Drivers/native_compiler/chardevRWOC/modules.order := {   echo /home/ashish/device_drivers/Device_Drivers/native_compiler/chardevRWOC/mydevicename2.ko; :; } | awk '!x[$$0]++' - > /home/ashish/device_drivers/Device_Drivers/native_compiler/chardevRWOC/modules.order
